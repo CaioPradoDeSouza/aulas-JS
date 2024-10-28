@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="content">
+        <div class="options">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome">
+            <label for="portas">Portas</label>
+            <input type="number" name="portas" id="portas" placeholder="0">
+            <label for="blindagem">Blindagem</label>
+            <input type="number" name="number" id="blindagem" disabled placeholder="0">
+            <label for="municao">Munição<output></output></label>
+            <input type="number" name="municao" id="municao" disabled placeholder="0">
+            <label for="tipo">Tipo</label>
+            <p><input type="radio" name="opt" id="militar" value="militar">Militar</p>
+            <p><input type="radio" name="opt" id="normal" value="normal" checked>Normal</p>
+            <button type="button" id="adicionarCarro" class="adcButton">Adicionar</button>
+        </div>
+        
+        <div id="carros" class="carros">
+        
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
