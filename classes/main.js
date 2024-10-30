@@ -12,7 +12,7 @@ let arrCarros=[]
 
 const removeCar=((who) => {
     arrCarros = arrCarros.filter((el) =>{
-        if(el.nome !=who)
+        if(el.nome != who)
             return el.nome!=who
     })
 })
