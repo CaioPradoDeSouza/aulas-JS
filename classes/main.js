@@ -10,6 +10,15 @@ let portasCarro = document.querySelector("#portas");
 
 let arrCarros=[]
 
+const removeCar=((who) => {
+    arrCarros = arrCarros.filter((el) =>{
+        if(el.nome !=who)
+            return el.nome!=who
+    })
+})
+
+
+
 tipoMilitar.addEventListener('click', (evt) => {
     nomeCarro.value ="";
     portasCarro.value ="";
@@ -33,13 +42,21 @@ const gerenciarExibiçãoCarros=()=>{
     carros.innerHTML = ""
     arrCarros.forEach((c)=>{
         const div=document.createElement("div")
+        const btn=document.createElement("button")
+        btn.innerHTML="Remover"
+        btn.addEventListener("click", (evt)=>{
+            const removeThat = evt.target.parentNode.dataset.nome
+            removeCar(removeThat)
+            gerenciarExibiçãoCarros()
+        })
         div.setAttribute("class","carro")
+        div.setAttribute("data-nome",c.nome)
         div.innerHTML =`Nome: ${c.nome} <br/>`
         div.innerHTML+= `Portas: ${c.portas} <br/>`
         div.innerHTML+= `Blindagem: ${c.blindagem} <br/>`
         div.innerHTML+= `Munição: ${c.municao} <br/>`
+        div.appendChild(btn)
         carros.appendChild(div)
-        
     })
     
 
