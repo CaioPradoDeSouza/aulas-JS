@@ -5,12 +5,23 @@
     border: none;
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
 .calc{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    background-color: #888;
+    border: 3px solid #bbb;
+    width: 200px;
+    border-radius: 10px;
+    padding: 7px;
 
 }
 
@@ -18,7 +29,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    font-size: 25px;
 }
 
 .div_display{
@@ -59,4 +70,20 @@
     border-color: rgba(255, 0, 0, 0.562) !important;
     background-color: #000000b6 !important;
     color: #fff !important;
+}
+
+#div_display{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+}
+
+#display{
+    text-align: right;
+    width: 180px;
+    background-color: #aaa;
+    padding: 5px;
+    font-family: monospace;
+    font-size: 25px;
 }
