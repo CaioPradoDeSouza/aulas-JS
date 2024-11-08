@@ -7,6 +7,10 @@ const display = document.querySelector("#display")
 const teclaCopy=document.querySelector('#keyCopy')
 const tLimpar=document.querySelector('#keyClean')
 const tIgual=document.querySelector('#keyEquals')
+const aba = document.getElementById("calcAba")
+const calc = document.getElementById("calc")
+
+// const teste = document.querySelector("#teste")
 
 let sinal=false
 let decimal=false
@@ -62,3 +66,18 @@ tIgual.addEventListener("click", (evt)=>{
     const res=eval(display.innerHTML)
     display.innerHTML=res
 });
+
+teclaCopy.addEventListener("click", (evt)=>{
+    navigator.clipboard.writeText(display.innerHTML)
+    // teste.select()
+
+    // teste.setSelectionRange(0,99999)//Mobile
+
+    // navigator.clipboard.writeText(teste.value)
+});
+
+aba.addEventListener("click",(evt)=>{
+
+    calc.classList.toggle("calcExibir")
+
+})
