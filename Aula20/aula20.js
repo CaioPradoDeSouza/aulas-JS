@@ -1,3 +1,9 @@
+function canal(){
+    alert("CFB Cursos")
+}
+
+
+
 function mudarTexto(){
     let d1=document.getElementById("d1")
     let d2=document.getElementById("d2")
